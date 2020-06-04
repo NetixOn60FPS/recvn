@@ -6,7 +6,7 @@ const api = require("imageapi.js")
 
 const client = new discord.Client();
 
-client.login(botConfig.token);
+client.login(process.env.token);
 client.commands = new discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
